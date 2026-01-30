@@ -109,14 +109,15 @@ export const getProfileBalance = async (address) => {
         });
 
         if (!response.data || !response.data.success) {
-            console.error("Fetch Profile Balance Error:", response.data);
-            throw new Error(response.data?.message || 'Failed to fetch profile balance');
+            // console.error("Fetch Profile Balance Error:", response.data);
+            // throw new Error(response.data?.message || 'Failed to fetch profile balance');
         }
 
         return response.data.data;
     } catch (error) {
-        console.error("Get Profile Balance failed:", error);
-        throw error;
+        // console.error("Get Profile Balance failed:", error);
+        // throw error;
+        return null;
     }
 };
 

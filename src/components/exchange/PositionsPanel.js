@@ -53,7 +53,8 @@ export default function PositionsPanel() {
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                const userAddress = process.env.NEXT_PUBLIC_XYRA_USER_ADDRESS;
+                const userAddress = '0x1234567890123456789012345678901234567890';
+                // TODO: Hard code user address for now
 
                 let newData = { ...data };
 

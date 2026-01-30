@@ -2,10 +2,11 @@ import { Aptos, AptosConfig, Network, Account, Ed25519PrivateKey, PrivateKey } f
 import axios from 'axios';
 import BigNumber from 'bignumber.js';
 
-const API_KEY = process.env.NEXT_PUBLIC_XYRA_API_KEY;
-const USER_ADDRESS = process.env.NEXT_PUBLIC_XYRA_USER_ADDRESS;
+// TODO: Hard code API key and user address for now
+const API_KEY = '';
+const USER_ADDRESS = '0x1234567890123456789012345678901234567890';
 
-const PRIVATE_KEY_RAW = process.env.NEXT_PUBLIC_XYRA_APTOS_PRIVATE_KEY;
+const PRIVATE_KEY_RAW = ''
 const BASE_URL = 'https://perps-tradeapi.kana.trade'; // Mainnet
 
 // Market Constants for Mainnet

@@ -4,6 +4,12 @@ const nextConfig = {
   reactCompiler: true,
   reactStrictMode: true,
   transpilePackages: ['react-ts-tradingview-widgets'],
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

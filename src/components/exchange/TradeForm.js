@@ -50,7 +50,8 @@ export default function TradeForm() {
             const wBal = await getWalletBalance();
             setWalletBalance(wBal);
 
-            const userAddress = process.env.NEXT_PUBLIC_XYRA_USER_ADDRESS;
+            const userAddress = '0x1234567890123456789012345678901234567890';
+            // TODO: Hard code user address for now
             if (userAddress) {
                 const pBal = await getProfileBalance(userAddress);
                 console.log("Profile Balance", pBal);

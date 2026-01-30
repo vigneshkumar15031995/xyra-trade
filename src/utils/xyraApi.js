@@ -6,7 +6,7 @@ const API_KEY = process.env.NEXT_PUBLIC_XYRA_API_KEY;
 const USER_ADDRESS = process.env.NEXT_PUBLIC_XYRA_USER_ADDRESS;
 
 const PRIVATE_KEY_RAW = process.env.NEXT_PUBLIC_XYRA_APTOS_PRIVATE_KEY;
-const BASE_URL = process.env.NEXT_PUBLIC_XYRA_API_BASE_URL; // Mainnet
+const BASE_URL = 'https://perps-tradeapi.kana.trade'; // Mainnet
 
 // Market Constants for Mainnet
 // IDs from installation-setup.md

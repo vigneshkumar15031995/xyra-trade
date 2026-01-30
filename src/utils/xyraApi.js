@@ -71,14 +71,15 @@ export const getWalletBalance = async () => {
         });
 
         if (!response.data || !response.data.success) {
-            console.error("Fetch Balance Error:", response.data);
+            // console.error("Fetch Balance Error:", response.data);
             throw new Error(response.data?.message || 'Failed to fetch balance');
         }
 
         return response.data.data;
     } catch (error) {
-        console.error("Get Wallet Balance failed:", error);
-        throw error;
+        // console.error("Get Wallet Balance failed:", error);
+        // throw error;
+        return null;
     }
 }
 
@@ -136,13 +137,13 @@ export const getProfileAddress = async () => {
         });
 
         if (!response.data || !response.data.success) {
-            console.error("Fetch Profile Address Error:", response.data);
+            // console.error("Fetch Profile Address Error:", response.data);
             throw new Error(response.data?.message || 'Failed to fetch profile address');
         }
 
         return response.data.data;
     } catch (error) {
-        console.error("Get Profile Address failed:", error);
+        // console.error("Get Profile Address failed:", error);
         throw error;
     }
 };
@@ -167,7 +168,7 @@ export const getPositions = async (address) => {
         const response = await axios.get(url, { params, headers: { 'x-api-key': API_KEY } });
         return response.data.data || [];
     } catch (error) {
-        console.error("Get Positions failed:", error);
+        // console.error("Get Positions failed:", error);
         return [];
     }
 };
@@ -258,7 +259,7 @@ export const getMarketInfo = async (marketId) => {
         }
         return null;
     } catch (error) {
-        console.error("Get Market Info failed:", error);
+        // console.error("Get Market Info failed:", error);
         return null;
     }
 };
@@ -363,7 +364,7 @@ export const placeOrder = async ({
         });
 
         if (!response.data || !response.data.success) {
-            console.error("API Error:", response.data);
+            // console.error("API Error:", response.data);
             throw new Error(response.data?.message || 'Failed to build order payload');
         }
 
